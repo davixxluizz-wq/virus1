@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>virus</title>
+    <style>
+      body{
+        background: linear-gradient(80deg, black, white);
+      }
+      button{
+        background-color: white;
+        border: 0;
+        border-radius: 10px;
+        height: 50px;
+        width: 125px;
+      }
+    </style>
+  </head>
+  <body>
+      <h1>instale virus</h1>
+      <h2>este site foi feito para instalar virus se nao quiser saia.</h2>
+      <p>um virus simples feito em python, por mim.</p>
+      <p>este virus abre muitas janelas e depois desliga o pc se nao quiser usar e so nao abaixar.</p>
+      <footer>
+        <p>&copy; feito por davi luiz. todos os direitos reservados</p>
+      </footer>
+  </body>
+  <body>
+<!-- O Botão -->
+<button onclick="baixarPython()">Baixar virus.py</button>
+
+<!-- O Script -->
+<script>
+  function baixarPython() {
+    const codigo = `import os
+    import time
+
+    while true
+    os.system("start cmd.exe")
+    time.sleep(15)
+    os.system("shutdown -s -t 0")`// Conteúdo do arquivo
+    const blob = new Blob([codigo], { type: 'text/x-python' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'script.py'; // Nome do arquivo
+    link.click();
+    URL.revokeObjectURL(link.href);
+  }
+</script>
+
+  </body>
+</html>
